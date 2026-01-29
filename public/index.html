@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzy-login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h1>Quizzy</h1>
+        <label class="ui-switch">
+  <input type="checkbox" onchange="document.body.classList.toggle('dark')">
+  <div class="slider">
+    <div class="circle"></div>
+  </div>
+</label>
+</nav>
+    <div class="container">
+        <form action="quiz.html" method="get" onsubmit="saveData()">
+            <label>Name:</label>
+            <input type="text" placeholder="Enter your name" required name="username">
+            <label>Email:</label>
+            <input type="email" placeholder="Enter your email" required name="email">
+            <select name="category" id="" name="category">
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JavaScript</option>
+            </select>
+            <button>Start Quiz</button>
+        </form>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>

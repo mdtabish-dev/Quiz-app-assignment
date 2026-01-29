@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzy-Score</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h1>Quizzy</h1>
+        <label class="ui-switch">
+  <input type="checkbox" onchange="document.body.classList.toggle('dark')">
+  <div class="slider">
+    <div class="circle"></div>
+  </div>
+</label>
+</nav>
+<div class="container">
+    <div class="box">
+      <h2>Quiz Completed!</h2>
+      <p id="username">Well done (username)</p>
+      <div class="percentage">
+        <p id="scorePercentage">80%</p>
+      </div>
+      <div class="mini-box">
+        <p id="userCategory">category</p>
+        <p id="userScore">total score</p>
+        <p id="userEmail">Email</p>
+
+      </div>
+      <a href="index.html" class="back">Restart Quiz</a>
+    </div>
+</div>
+</body>
+<script src="app.js"></script>
+<script>
+        window.onload = function() {
+            displayScore();
+        };
+    </script>
+</html>

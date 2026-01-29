@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzy - Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h1>Quizzy</h1>
+        <label class="ui-switch">
+            <input type="checkbox" onchange="document.body.classList.toggle('dark')">
+            <div class="slider">
+                <div class="circle"></div>
+            </div>
+        </label>
+    </nav>
+
+    <div class="quiz-container">
+        <div class="question-box">
+            <p id="ques">Question will appear here</p>
+        </div>
+
+        <div class="options-container">
+            <button class="option-btn">Option 1</button>
+            <button class="option-btn">Option 2</button>
+            <button class="option-btn">Option 3</button>
+            <button class="option-btn">Option 4</button>
+        </div>
+
+        <div class="next-btn-container">
+            <button id="btn" disabled onclick="nextQuestion()">Next</button>
+        </div>
+    </div>
+
+</body>
+<script src="app.js"></script>
+</html>
