@@ -17,19 +17,27 @@
 </label>
 </nav>
     <div class="container">
-        <form action="quiz.html" method="get" onsubmit="saveData()">
+        <form id="authForm">
             <label>Name:</label>
             <input type="text" placeholder="Enter your name" required name="username">
             <label>Email:</label>
             <input type="email" placeholder="Enter your email" required name="email">
+            <label>Password:</label>
+            <input type="password" placeholder="Enter your password" required name="password">
             <select name="category" id="" name="category">
                 <option value="HTML">HTML</option>
                 <option value="CSS">CSS</option>
                 <option value="JavaScript">JavaScript</option>
             </select>
-            <button>Start Quiz</button>
+            <input type="hidden" name="authAction" id="authAction" value="login">
+            <button type="submit" data-action="signup" onclick="document.getElementById('authAction').value='signup'">Signup</button>
+            <button type="submit" data-action="login" onclick="document.getElementById('authAction').value='login'">Login</button>
         </form>
     </div>
 </body>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+<script src="firebase.js"></script>
 <script src="app.js"></script>
 </html>
