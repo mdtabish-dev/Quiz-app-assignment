@@ -247,7 +247,9 @@ function checkAnswer(clickedBtn) {
 function setupButtons() {
   var btns = document.getElementsByClassName("option-btn");
   for (var i = 0; i < btns.length; i++) {
-    btns[i].onclick = function () { handleClick(i); };
+    (function (index) {
+      btns[index].onclick = function () { handleClick(index); };
+    })(i);
   }
 }
 
